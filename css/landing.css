@@ -3,7 +3,7 @@
 ========================== */
 
 header {
-  background: white;
+   background: var(--card);
   box-shadow: var(--shadow-sm);
 
   position: sticky;
@@ -22,6 +22,8 @@ header {
 
   padding: 20px 0;
 }
+
+
 
 .logo h2 {
   color: var(--primary);
@@ -103,6 +105,11 @@ header {
   font-size: 18px;
 }
 
+.mobile-login,
+.mobile-register {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .menu-btn {
     display: flex;
@@ -112,7 +119,7 @@ header {
     justify-content: center;
   }
 
-  .nav-links {
+   .nav-links {
     display: none;
 
     position: absolute;
@@ -123,21 +130,48 @@ header {
 
     width: 100%;
 
-    background: white;
+    background: var(--card);
 
     flex-direction: column;
 
-    padding: 30px;
+    padding: 25px;
+
+    gap: 10px;
 
     box-shadow: var(--shadow-md);
+
+    z-index: 99;
   }
 
   .nav-links.show {
     display: flex;
   }
 
-  .nav-actions .btn {
-    display: none;
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border-radius: 10px;
+  }
+
+  .nav-links li a:hover {
+    background: rgba(37, 99, 235, 0.1);
+  }
+
+  .mobile-login,
+  .mobile-register {
+    display: block;
+  }
+
+  .desktop-auth {
+    display: none !important;
   }
 }
 
@@ -145,32 +179,32 @@ header {
    DARK MODE
 ========================== */
 
-body.dark {
+html.dark body {
   background: #0f172a;
 
   color: white;
 }
 
-body.dark header {
+html.dark header {
   background: #1e293b;
 }
 
-body.dark .card,
-body.dark .dashboard-card,
-body.dark .mini-card,
-body.dark .faq-item {
+html.dark .card,
+html.dark .dashboard-card,
+html.dark .mini-card,
+html.dark .faq-item {
   background: #1e293b;
 
   color: white;
 }
 
-body.dark .section-text,
-body.dark p,
-body.dark span {
+html.dark .section-text,
+html.dark p,
+html.dark span {
   color: #cbd5e1;
 }
 
-body.dark .input {
+html.dark .input {
   background: #334155;
 
   border-color: #475569;
@@ -178,7 +212,7 @@ body.dark .input {
   color: white;
 }
 
-body.dark .btn-secondary {
+html.dark .btn-secondary {
   background: #334155;
 
   color: white;
@@ -203,7 +237,7 @@ body.dark .btn-secondary {
 .badge {
   display: inline-block;
 
-  background: #e0f2fe;
+  background: #1E293B;
 
   color: var(--primary);
 
@@ -244,8 +278,10 @@ body.dark .btn-secondary {
   gap: 20px;
 }
 
+
+
 .hero-card {
-  background: white;
+ background: var(--card);
 
   border-radius: 25px;
 
@@ -397,7 +433,7 @@ body.dark .btn-secondary {
 }
 
 .dashboard-card {
-  background: white;
+ background: var(--card);
 
   padding: 40px;
 
@@ -417,7 +453,7 @@ body.dark .btn-secondary {
 }
 
 .mini-card {
-  background: #f8fafc;
+  background: var(--background);
 
   padding: 30px;
 
@@ -565,7 +601,7 @@ body.dark .btn-secondary {
 .faq {
   padding: 120px 0;
 
-  background: white;
+  background: var(--card);
 }
 
 .faq .section-title {
@@ -581,7 +617,7 @@ body.dark .btn-secondary {
 
   margin-bottom: 25px;
 
-  background: #f8fafc;
+ background: var(--background);
 
   box-shadow: var(--shadow-sm);
 }

@@ -352,18 +352,22 @@ onAuthStateChanged(
 // MOBILE SIDEBAR
 // ================================
 
-menuToggle.addEventListener("click", () => {
+if (menuToggle && sidebar && sidebarOverlay) {
 
-    sidebar.classList.add("show");
+    menuToggle.addEventListener("click", () => {
 
-    sidebarOverlay.classList.add("show");
+        sidebar.classList.toggle("show");
 
-});
+        sidebarOverlay.classList.toggle("show");
 
-sidebarOverlay.addEventListener("click", () => {
+    });
 
-    sidebar.classList.remove("show");
+    sidebarOverlay.addEventListener("click", () => {
 
-    sidebarOverlay.classList.remove("show");
+        sidebar.classList.remove("show");
 
-});
+        sidebarOverlay.classList.remove("show");
+
+    });
+
+}
