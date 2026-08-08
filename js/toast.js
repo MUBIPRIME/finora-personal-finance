@@ -1,42 +1,88 @@
-const toast =
+let toast =
 document.getElementById("toast");
 
-const title =
+let title =
 document.getElementById("toastTitle");
 
-const message =
+let message =
 document.getElementById("toastMessage");
 
-const icon =
+let icon =
 document.getElementById("toastIcon");
 
-const progress =
+let progress =
 document.getElementById("toastProgress");
 
-const close =
+let close =
 document.getElementById("toastClose");
 
 let timer;
 
+function ensureToastStructure() {
+    if (!toast) return false;
+
+    if (title && message && icon && progress && close) {
+        return true;
+    }
+
+    toast.innerHTML = `
+        <div class="toast-icon">
+            <i id="toastIcon" class="fa-solid fa-circle-check"></i>
+        </div>
+        <div class="toast-content">
+            <h4 id="toastTitle"></h4>
+            <p id="toastMessage"></p>
+        </div>
+        <button id="toastClose" class="toast-close">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div id="toastProgress" class="toast-progress"></div>
+    `;
+
+    title = document.getElementById("toastTitle");
+    message = document.getElementById("toastMessage");
+    icon = document.getElementById("toastIcon");
+    progress = document.getElementById("toastProgress");
+    close = document.getElementById("toastClose");
+
+    if (close) {
+        close.onclick = () => {
+            toast.classList.remove("show");
+        };
+    }
+
+    return !!toast && !!title && !!message && !!icon && !!progress && !!close;
+}
+
 export function showToast(
 
-titleText,
+text,
 
-messageText,
+messageOrType,
 
 type="success"
 
 ){
 
-if(
-!toast ||
-!title ||
-!message ||
-!icon ||
-!progress ||
-!close
-){
-return;
+let titleText = text || "";
+let messageText = messageOrType || "";
+
+const toastTypes = ["success", "error", "warning", "info"];
+
+if (toastTypes.includes(messageOrType)) {
+    type = messageOrType;
+    messageText = titleText;
+    titleText = type === "error" ? "Error" : type === "warning" ? "Warning" : type === "info" ? "Info" : "Success";
+}
+
+if (!messageText) {
+    messageText = titleText;
+    titleText = type === "error" ? "Error" : type === "warning" ? "Warning" : type === "info" ? "Info" : "Success";
+}
+
+if(!ensureToastStructure()){
+    window.alert(`${titleText}: ${messageText}`);
+    return;
 }
 
 toast.className=`toast ${type}`;

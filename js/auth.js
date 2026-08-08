@@ -94,6 +94,14 @@ export async function registerUser(
                 message = "Please check your internet connection.";
                 break;
 
+            case "auth/unauthorized-domain":
+                message = "This website is not authorized for Firebase auth. Add your domain to Firebase console.";
+                break;
+
+            case "auth/operation-not-allowed":
+                message = "Email/password sign-in is disabled in Firebase Auth settings.";
+                break;
+
             default:
                 message = error.message;
 
@@ -151,6 +159,10 @@ export async function loginUser(
 
             case "auth/network-request-failed":
                 message = "Please check your internet connection.";
+                break;
+
+            case "auth/unauthorized-domain":
+                message = "This website is not authorized for Firebase auth. Add your domain to Firebase console.";
                 break;
 
             default:
