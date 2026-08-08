@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Transactions | Finora</title>
+<link rel="shortcut icon" href="../assets/favicon.png.png" type="image/x-icon">
+
+<link rel="stylesheet"
+href="../css/global.css">
+
+<link rel="stylesheet"
+href="../css/report.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="../css/confirm-modal.css">
+
+</head>
+
+<body>
+    <a href="./dashboard.html" class="back-btn">
+
+    <i class="fa-solid fa-arrow-left"></i>
+
+    Back
+
+</a>
+
+<div class="report-container">
+
+<div class="report-card">
+
+<h1>Transactions</h1>
+
+<p>All your income and expenses in one place.</p>
+
+<div class="toolbar">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search description or category...">
+
+<select id="filterType">
+
+<option value="all">
+All Transactions
+</option>
+
+<option value="income">
+Income
+</option>
+
+<option value="expense">
+Expense
+</option>
+
+</select>
+
+</div>
+
+<div class="table-wrapper"></div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Date</th>
+
+<th>Type</th>
+
+<th>Category</th>
+
+<th>Description</th>
+
+<th>Amount</th>
+
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody id="transactionTable">
+
+<tr>
+
+<td colspan="5">
+
+Loading transactions...
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+
+<div id="editModal" class="modal">
+
+    <div class="modal-content">
+
+        <h2>Edit Transaction</h2>
+
+        <input
+            type="number"
+            id="editAmount"
+            placeholder="Amount">
+
+        <select id="editCategory">
+
+            <option>Salary</option>
+            <option>Business</option>
+            <option>Freelance</option>
+            <option>Investment</option>
+            <option>Gift</option>
+
+            <option>Food</option>
+            <option>Transport</option>
+            <option>Shopping</option>
+            <option>Bills</option>
+            <option>Entertainment</option>
+            <option>Health</option>
+            <option>Education</option>
+            <option>Other</option>
+
+        </select>
+
+        <input
+            type="text"
+            id="editDescription"
+            placeholder="Description">
+
+        <input
+            type="date"
+            id="editDate">
+
+        <div class="modal-buttons">
+
+            <button
+                id="saveEdit">
+
+                Save Changes
+
+            </button>
+
+            <button
+                id="cancelEdit">
+
+                Cancel
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Confirm Modal -->
+<div id="confirmModal" class="confirm-modal">
+
+    <div class="confirm-box">
+
+        <div class="confirm-icon">
+            <i class="fa-solid fa-trash"></i>
+        </div>
+
+        <h2 id="confirmTitle">
+            Delete Transaction
+        </h2>
+
+        <p id="confirmMessage">
+            Are you sure you want to continue?
+        </p>
+
+        <div class="confirm-buttons">
+
+            <button
+                id="confirmCancel"
+                class="secondary-btn">
+
+                Cancel
+
+            </button>
+
+            <button
+                id="confirmOk"
+                class="danger-btn">
+
+                Delete
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script
+type="module"
+src="../js/report.js">
+
+</script>
+
+</body>
+
+</html>

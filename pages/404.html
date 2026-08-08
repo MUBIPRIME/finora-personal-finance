@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Page Not Found | Finora</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/404.css">
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="../assets/favicon.png">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <main class="error-page">
+
+        <div class="error-card">
+
+            <div class="error-icon">
+
+                <i class="fa-solid fa-compass"></i>
+
+            </div>
+
+            <h1>404</h1>
+
+            <h2>Page Not Found</h2>
+
+            <p>
+                Oops! The page you're looking for doesn't exist
+                or may have been moved.
+            </p>
+
+            <div class="error-buttons">
+
+                <a
+                    href="./dashboard.html"
+                    class="home-btn">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Back to Dashboard
+
+                </a>
+
+        <button
+    onclick="goBack()"
+    class="back-btn">
+    
+    <i class="fa-solid fa-arrow-left"></i>
+
+    Go Back
+
+</button>
+
+            </div>
+
+        </div>
+
+    </main>
+    <script>
+
+function goBack() {
+
+    if (history.length > 1) {
+
+        history.back();
+
+    } else {
+
+        window.location.href = "./dashboard.html";
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>

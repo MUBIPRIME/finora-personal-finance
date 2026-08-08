@@ -1,0 +1,515 @@
+/* ===========================
+   SETTINGS PAGE
+=========================== */
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+font-family:Arial,Helvetica,sans-serif;
+
+}
+body{
+
+min-height:100vh;
+
+padding:40px;
+
+background:inherit;
+
+color:inherit;
+
+}
+
+.settings-container{
+
+max-width:900px;
+
+margin:auto;
+
+display:flex;
+
+flex-direction:column;
+
+gap:30px;
+
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.page-header{
+
+margin-bottom:10px;
+
+}
+
+.page-header h1{
+
+font-size:38px;
+
+color:#1E293B;
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+margin-bottom:10px;
+
+}
+
+.page-header p{
+
+color:#64748B;
+
+font-size:16px;
+
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.settings-card{
+
+background:white;
+
+border-radius:24px;
+
+padding:30px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.settings-card h2{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+font-size:22px;
+
+margin-bottom:25px;
+
+color:#1E293B;
+
+}
+
+/* ===========================
+   PROFILE
+=========================== */
+
+.profile-box{
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
+
+}
+
+.avatar{
+
+width:80px;
+
+height:80px;
+
+border-radius:50%;
+
+background:linear-gradient(135deg,#2563EB,#7C3AED);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:white;
+
+font-size:32px;
+
+}
+
+.profile-info h3{
+
+font-size:24px;
+
+margin-bottom:6px;
+
+color:#1E293B;
+
+}
+
+.profile-info p{
+
+color:#64748B;
+
+}
+
+/* ===========================
+   SETTINGS ROW
+=========================== */
+
+.setting-row{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:20px;
+
+}
+
+.setting-row span{
+
+font-weight:600;
+
+color:#334155;
+
+}
+
+.setting-row select{
+
+padding:12px 18px;
+
+border:1px solid #CBD5E1;
+
+border-radius:12px;
+
+font-size:15px;
+
+outline:none;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.setting-row select:focus{
+
+border-color:#2563EB;
+
+box-shadow:0 0 0 4px rgba(37,99,235,.15);
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.primary-btn,
+
+.secondary-btn,
+
+.danger-btn{
+
+padding:15px 22px;
+
+border:none;
+
+border-radius:14px;
+
+font-size:15px;
+
+font-weight:600;
+
+cursor:pointer;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:10px;
+
+transition:.3s;
+
+}
+
+.primary-btn{
+
+background:linear-gradient(135deg,#2563EB,#7C3AED);
+
+color:white;
+
+}
+
+.secondary-btn{
+
+background:#EEF2FF;
+
+color:#2563EB;
+
+}
+
+.danger-btn{
+
+background:#EF4444;
+
+color:white;
+
+}
+
+.primary-btn:hover,
+
+.secondary-btn:hover,
+
+.danger-btn:hover{
+
+transform:translateY(-2px);
+
+}
+
+.account-buttons{
+
+display:flex;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+body{
+
+padding:20px;
+
+}
+
+.setting-row{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.setting-row select{
+
+width:100%;
+
+}
+
+.profile-box{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.account-buttons{
+
+flex-direction:column;
+
+}
+
+.primary-btn,
+
+.secondary-btn,
+
+.danger-btn{
+
+width:100%;
+
+}
+
+}
+/* ===========================
+   SAVE SETTINGS
+=========================== */
+
+.settings-save{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-top:20px;
+
+gap:20px;
+
+}
+
+#settingsStatus{
+
+font-size:15px;
+
+color:#64748B;
+
+}
+
+#saveSettingsBtn:disabled{
+
+opacity:.5;
+
+cursor:not-allowed;
+
+}
+
+@media(max-width:768px){
+
+.settings-save{
+
+flex-direction:column;
+
+align-items:stretch;
+
+}
+
+}
+
+/* ===========================
+   LEGAL
+=========================== */
+
+.legal-links{
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+}
+
+.legal-link{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:16px 18px;
+
+border:1px solid var(--border);
+
+border-radius:14px;
+
+text-decoration:none;
+
+color:var(--text);
+
+background:var(--input);
+
+transition:.3s ease;
+
+}
+
+.legal-link > div{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+}
+
+.legal-link i{
+
+color:#2563EB;
+
+}
+
+.legal-link > i{
+
+font-size:14px;
+
+color:var(--text-light);
+
+transition:.3s ease;
+
+}
+
+.legal-link:hover{
+
+transform:translateX(4px);
+
+border-color:#2563EB;
+
+}
+
+.legal-link:hover > i{
+
+transform:translateX(4px);
+
+color:#2563EB;
+
+}
+/* ===========================
+   LEGAL - DARK MODE
+=========================== */
+
+html.dark .legal-link{
+
+    background:#334155 !important;
+
+    color:#F8FAFC !important;
+
+    border-color:#475569 !important;
+
+}
+
+html.dark .legal-link span{
+
+    color:#F8FAFC !important;
+
+}
+
+html.dark .legal-link > i{
+
+    color:#94A3B8 !important;
+
+}
+
+html.dark .legal-link div i{
+
+    color:#60A5FA !important;
+
+}
+
+html.dark .legal-link:hover{
+
+    background:#3F4E63 !important;
+
+    border-color:#60A5FA !important;
+
+}
+
+html.dark .legal-link:hover > i{
+
+    color:#60A5FA !important;
+
+}
+html.dark .settings-card{
+
+    background:#1E293B !important;
+
+    color:#F8FAFC !important;
+
+}

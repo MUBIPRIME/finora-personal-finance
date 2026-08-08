@@ -1,0 +1,49 @@
+.analytics-page {
+  max-width: 1300px;
+
+  margin: auto;
+
+  padding: 40px;
+}
+
+.analytics-page h1 {
+  font-size: 42px;
+
+  margin-bottom: 8px;
+}
+
+.analytics-page p {
+  color: #64748b;
+
+  margin-bottom: 40px;
+}
+
+.charts {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 30px;
+}
+
+.card {
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+canvas {
+  width: 100%;
+
+  height: 420px;
+}
+
+@media (max-width: 900px) {
+  .charts {
+    grid-template-columns: 1fr;
+  }
+}

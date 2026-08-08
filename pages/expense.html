@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Add Expense | Finora</title>
+<link rel="shortcut icon" href="../assets/favicon.png.png" type="image/x-icon">
+
+<link rel="stylesheet" href="../css/global.css">
+<link rel="stylesheet" href="../css/expense.css">
+<link rel="stylesheet" href="../css/toast.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="expense-container">
+
+<div class="expense-card">
+    <a href="./dashboard.html" class="back-btn">
+
+    <i class="fa-solid fa-arrow-left"></i>
+
+    Back
+
+</a>
+
+<h1>Add Expense</h1>
+
+<p>Track where your money goes.</p>
+
+<form id="expenseForm">
+
+<input
+type="number"
+id="amount"
+placeholder="Amount"
+required>
+
+<select
+id="category"
+required>
+
+<option value="">Choose Category</option>
+
+<option>Food</option>
+
+<option>Transport</option>
+
+<option>Shopping</option>
+
+<option>Bills</option>
+
+<option>Entertainment</option>
+
+<option>Health</option>
+
+<option>Education</option>
+
+<option>Other</option>
+
+</select>
+
+<input
+type="text"
+id="description"
+placeholder="Description">
+
+<input
+type="date"
+id="date"
+required>
+
+<button
+type="submit"
+class="submit-btn">
+
+Save Expense
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<div id="toast" class="toast success">
+
+    <div class="toast-icon">
+        <i
+            id="toastIcon"
+            class="fa-solid fa-circle-check">
+        </i>
+    </div>
+
+    <div class="toast-content">
+
+        <h4 id="toastTitle">
+            Success
+        </h4>
+
+        <p id="toastMessage">
+            Message
+        </p>
+
+    </div>
+
+    <button
+        id="toastClose"
+        class="toast-close"
+        type="button">
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+    <div
+        id="toastProgress"
+        class="toast-progress">
+    </div>
+
+</div>
+<script
+type="module"
+src="../js/expense.js">
+
+</script>
+
+</body>
+
+
+</html>

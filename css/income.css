@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: var(--background);
+
+  color: var(--text);
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 40px;
+
+  transition: 0.3s;
+}
+
+.income-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.income-card {
+  width: 100%;
+
+  max-width: 700px;
+
+  margin: auto;
+
+  background: var(--card);
+
+  padding: 40px;
+
+  border-radius: 24px;
+
+  box-shadow: var(--shadow);
+}
+
+.income-card h1 {
+  font-size: 38px;
+
+  margin-bottom: 10px;
+
+  color: var(--text);
+}
+
+.income-card p {
+  color: var(--text-light);
+
+  margin-bottom: 35px;
+}
+
+#incomeForm {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+#incomeForm input,
+#incomeForm select {
+  padding: 16px;
+
+  background: var(--input);
+
+  color: var(--text);
+
+  border: 1px solid var(--border);
+
+  border-radius: 12px;
+
+  font-size: 16px;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+#incomeForm input:focus,
+#incomeForm select:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+.income-card input,
+.income-card select,
+.income-card textarea {
+  width: 100%;
+
+  padding: 16px;
+
+  font-size: 16px;
+}
+
+.back-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  text-decoration: none;
+
+  color: var(--text);
+
+  background: var(--input);
+
+  padding: 10px 18px;
+
+  border-radius: 12px;
+
+  margin-bottom: 25px;
+
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  transform: translateX(-4px);
+}
+
+.submit-btn {
+  width: 100%;
+
+  padding: 18px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 10px;
+}
+.submit-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.25);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 20px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .income-card {
+    padding: 28px 20px;
+
+    border-radius: 20px;
+  }
+
+  .income-card h1 {
+    font-size: 34px;
+  }
+
+  .income-card p {
+    font-size: 16px;
+
+    margin-bottom: 20px;
+  }
+}
+.submit-btn {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.submit-btn:disabled {
+  opacity: 0.75;
+
+  cursor: not-allowed;
+}
+
+.submit-btn i {
+  font-size: 16px;
+}

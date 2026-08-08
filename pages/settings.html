@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Settings | Finora</title>
+<link rel="shortcut icon" href="../assets/favicon.png.png" type="image/x-icon">
+
+<link
+rel="stylesheet"
+href="../css/global.css">
+
+<link
+rel="stylesheet"
+href="../css/settings.css">
+
+<link
+rel="stylesheet"
+href="../css/toast.css">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+    <a href="./dashboard.html" class="back-btn">
+
+    <i class="fa-solid fa-arrow-left"></i>
+
+    Back
+
+</a>
+
+<div class="settings-container">
+
+<!-- ========================= -->
+<!-- PAGE TITLE -->
+<!-- ========================= -->
+
+<div class="page-header">
+
+<h1>
+
+<i class="fa-solid fa-gear"></i>
+
+Settings
+
+</h1>
+
+<p>
+
+Manage your Finora account and preferences.
+
+</p>
+
+</div>
+
+<!-- ========================= -->
+<!-- PROFILE -->
+<!-- ========================= -->
+
+<div class="settings-card">
+
+<h2>
+
+<i class="fa-solid fa-user"></i>
+
+Profile
+
+</h2>
+
+<div class="profile-box">
+
+<div class="avatar">
+
+<i class="fa-solid fa-user"></i>
+
+</div>
+
+<div class="profile-info">
+
+<h3 id="displayName">
+
+Loading...
+
+</h3>
+
+<p id="email">
+
+Loading...
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- APPEARANCE -->
+<!-- ========================= -->
+
+<div class="settings-card">
+
+<h2>
+
+<i class="fa-solid fa-palette"></i>
+
+Appearance
+
+</h2>
+
+<div class="setting-row">
+
+<span>
+
+Theme
+
+</span>
+
+<select id="theme">
+
+<option value="light">
+
+☀️ Light
+
+</option>
+
+<option value="dark">
+
+🌙 Dark
+
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- CURRENCY -->
+<!-- ========================= -->
+
+<div class="settings-card">
+
+<h2>
+
+<i class="fa-solid fa-money-bill-wave"></i>
+
+Currency
+
+</h2>
+
+<div class="setting-row">
+
+<span>
+
+Currency
+
+</span>
+
+<select id="currency">
+
+<option value="NGN">
+
+₦ Nigerian Naira
+
+</option>
+
+<option value="USD">
+
+$ US Dollar
+
+</option>
+
+<option value="GBP">
+
+£ British Pound
+
+</option>
+
+<option value="EUR">
+
+€ Euro
+
+</option>
+
+<option value="CAD">
+
+C$ Canadian Dollar
+
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- LANGUAGE -->
+<!-- ========================= -->
+
+<div class="settings-card">
+
+<h2>
+
+<i class="fa-solid fa-earth-africa"></i>
+
+Language
+
+</h2>
+
+<div class="setting-row">
+
+<span>
+
+Language
+
+</span>
+
+<select id="language">
+
+<option>
+
+English
+
+</option>
+
+<option>
+
+French
+
+</option>
+
+<option>
+
+Spanish
+
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- SECURITY -->
+<!-- ========================= -->
+
+<div class="settings-card">
+
+<h2>
+
+<i class="fa-solid fa-lock"></i>
+
+Security
+
+</h2>
+
+<button
+id="changePassword"
+class="primary-btn">
+
+<i class="fa-solid fa-key"></i>
+
+Change Password
+
+</button>
+
+</div>
+
+<!-- ========================= -->
+<!-- LEGAL -->
+<!-- ========================= -->
+
+<div class="settings-card">
+
+<h2>
+
+<i class="fa-solid fa-scale-balanced"></i>
+
+Legal
+
+</h2>
+
+<div class="legal-links">
+
+<a href="./terms.html" class="legal-link">
+
+<div>
+
+<i class="fa-solid fa-file-contract"></i>
+
+<span>
+
+Terms & Conditions
+
+</span>
+
+</div>
+
+<i class="fa-solid fa-chevron-right"></i>
+
+</a>
+
+<a href="./privacy.html" class="legal-link">
+
+<div>
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<span>
+
+Privacy Policy
+
+</span>
+
+</div>
+
+<i class="fa-solid fa-chevron-right"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- ACCOUNT -->
+<!-- ========================= -->
+
+<div class="settings-card">
+
+<h2>
+
+<i class="fa-solid fa-user-shield"></i>
+
+Account
+
+</h2>
+
+<div class="account-buttons">
+
+<button
+id="logoutBtn"
+class="secondary-btn">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</button>
+
+<button
+id="deleteAccountBtn"
+class="danger-btn">
+
+<i class="fa-solid fa-trash"></i>
+
+Delete Account
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="settings-save">
+
+<p id="settingsStatus">
+
+No changes yet.
+
+</p>
+
+<button
+id="saveSettingsBtn"
+class="primary-btn"
+disabled>
+
+<i class="fa-solid fa-floppy-disk"></i>
+
+Save Changes
+
+</button>
+
+</div>
+
+<!-- ========================= -->
+<!-- TOAST -->
+<!-- ========================= -->
+
+<div id="toast" class="toast success">
+
+<div class="toast-icon">
+
+<i
+id="toastIcon"
+class="fa-solid fa-circle-check">
+
+</i>
+
+</div>
+
+<div class="toast-content">
+
+<h4 id="toastTitle">
+
+Success
+
+</h4>
+
+<p id="toastMessage">
+
+Message
+
+</p>
+
+</div>
+
+<button
+id="toastClose"
+class="toast-close"
+type="button">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+<div
+id="toastProgress"
+class="toast-progress">
+
+</div>
+
+</div>
+
+<script
+type="module"
+src="../js/settings.js">
+
+</script>
+
+</body>
+
+</html>
