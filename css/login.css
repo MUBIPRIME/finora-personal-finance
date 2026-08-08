@@ -125,10 +125,10 @@ body {
   margin-bottom: 35px;
 }
 
-.submit-btn {
+.login-card button[type="submit"] {
   width: 100%;
 
-  margin-top: 10px;
+  margin-top: 18px;
 }
 
 .login-text {
@@ -153,7 +153,61 @@ body {
   }
 
   body {
-    padding: 30px;
+    padding: 20px;
+  }
+
+  .login-right {
+    padding: 20px 0;
+  }
+
+  .login-card {
+    max-width: 100%;
+    padding: 35px 25px;
+  }
+
+  .login-card h2 {
+    font-size: 30px;
+  }
+
+  .login-card > p {
+    font-size: 16px;
+  }
+
+  .login-options {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .login-options label,
+  .login-options a {
+    width: 100%;
+  }
+
+  .login-text {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 16px;
+  }
+
+  .login-card {
+    padding: 28px 22px;
+  }
+
+  .login-card h2 {
+    font-size: 28px;
+  }
+
+  .login-card > p {
+    margin-bottom: 28px;
+  }
+
+  .login-options {
+    margin-bottom: 24px;
   }
 }
 .password-group {

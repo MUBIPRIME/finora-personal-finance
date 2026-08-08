@@ -202,11 +202,61 @@ display:none;
 
 body{
 
-padding:30px;
+padding:20px;
 
 }
 
-}.password-group{
+.register-right{
+
+padding:20px 0;
+
+}
+
+.register-card{
+
+max-width:100%;
+
+padding:35px 24px;
+
+}
+
+.register-card h2{
+
+font-size:32px;
+
+}
+
+.register-card>p{
+
+margin-bottom:28px;
+
+}
+
+.register-card button[type="submit"]{
+
+margin-top:18px;
+
+}
+
+.password-group{
+
+margin-bottom:16px;
+
+}
+
+.terms{
+
+flex-wrap:wrap;
+
+align-items:flex-start;
+
+gap:10px;
+
+}
+
+}
+
+.password-group{
 
 position:relative;
 

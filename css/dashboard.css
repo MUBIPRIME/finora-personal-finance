@@ -1,6 +1,8 @@
-/* DASHBOARD */
 
-* {
+   /* DASHBOARD */
+
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,44 +22,40 @@ body {
   min-height: 100vh;
 }
 
-.favicon {
-  width: 100px;
-}
-
-/* SIDEBAR */
-
 .sidebar {
   background: linear-gradient(180deg, #2563eb, #7c3aed);
   padding: 30px 20px;
   color: white;
 }
 
-/* FINORA LOGO */
+
+   /* FINORA LOGO */
+
 
 .logo {
   display: flex;
   align-items: center;
-
+  gap: 12px;
   padding: 10px 15px;
   margin-bottom: 30px;
 }
 
 .logo .favicon {
-  width: 150px;
-
+  width: 42px;
+  height: 42px;
   object-fit: contain;
-
   border-radius: 10px;
 }
 
 .logo span {
   font-size: 24px;
-
   font-weight: 800;
-
-  color: white;
-
+  color: #ffffff;
   letter-spacing: -0.5px;
+}
+
+.logo span::first-letter {
+  color: #f8fafc;
 }
 
 .sidebar nav {
@@ -82,7 +80,9 @@ body {
   background: rgba(255, 255, 255, 0.18);
 }
 
-/* MAIN */
+
+   /* MAIN */
+
 
 .content {
   width: 100%;
@@ -91,23 +91,26 @@ body {
   overflow-x: hidden;
 }
 
-/* TOPBAR */
-.topbar {
-  display: flex;
 
-  align-items: flex-start;
+   /* TOPBAR */
+.topbar{
 
-  justify-content: space-between;
+display:flex;
 
-  position: relative;
+align-items:flex-start;
 
-  margin-bottom: 30px;
+justify-content:space-between;
+
+position:relative;
+
+margin-bottom:30px;
+
 }
 
-.topbar-left {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
+.topbar-left{
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
 }
 
 .topbar h1 {
@@ -115,14 +118,16 @@ body {
   margin-bottom: 8px;
 }
 
-.topbar p {
-  white-space: nowrap;
+.topbar p{
 
-  overflow: hidden;
+white-space: nowrap;
 
-  text-overflow: ellipsis;
+overflow: hidden;
 
-  font-size: 14px;
+text-overflow: ellipsis;
+
+font-size:14px;
+
 }
 .profile {
   display: flex;
@@ -141,7 +146,9 @@ body {
   border-radius: 50%;
 }
 
-/* CARDS */
+
+   /* CARDS */
+
 
 .cards {
   display: grid;
@@ -153,7 +160,7 @@ body {
 .card {
   background: var(--card);
 
-  padding: 24px;
+ padding:24px;
 
   border-radius: 20px;
 
@@ -180,7 +187,9 @@ body {
   font-size: 32px;
 }
 
-/* QUICK ACTIONS */
+
+   /* QUICK ACTIONS */
+
 
 .actions {
   display: grid;
@@ -213,6 +222,8 @@ body {
   transform: translateY(-5px);
 }
 
+
+
 .transactions {
   background: var(--card);
 
@@ -226,31 +237,34 @@ body {
   margin-bottom: 25px;
 }
 
-.menu-toggle {
-  display: none;
+.menu-toggle{
 
-  width: 42px;
+display:none;
 
-  height: 42px;
+width:42px;
 
-  margin-top: 4px;
+height:42px;
 
-  border: none;
+   margin-top:4px;
 
-  background: none;
+border:none;
 
-  font-size: 24px;
+background:none;
 
-  color: var(--text);
+font-size:24px;
 
-  cursor: pointer;
+color:var(--text);
 
-  align-items: center;
+cursor:pointer;
 
-  justify-content: center;
+align-items:center;
 
-  flex-shrink: 0;
+justify-content:center;
+
+flex-shrink:0;
+
 }
+
 
 @media (max-width: 1100px) {
   .cards {
@@ -271,16 +285,22 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .card h2 {
-    font-size: 22px;
-  }
+  .card h2{
 
-  .card h3 {
-    font-size: 16px;
-  }
+font-size:22px;
+
+}
+
+.card h3{
+
+font-size:16px;
+
+}
 
   .topbar {
     flex-wrap: wrap;
+
+    
 
     gap: 15px;
   }
@@ -298,25 +318,31 @@ body {
     display: flex;
   }
 
-  .profile {
-    display: flex;
+.profile{
 
-    align-items: center;
+display:flex;
 
-    gap: 10px;
+align-items:center;
 
-    margin-left: auto;
-  }
+gap:10px;
 
-  .profile img {
-    width: 38px;
+margin-left:auto;
 
-    height: 38px;
-  }
+}
 
-  .profile i {
-    font-size: 18px;
-  }
+.profile img{
+
+width:38px;
+
+height:38px;
+
+}
+
+.profile i{
+
+font-size:18px;
+
+}
 
   /* Sidebar becomes drawer */
 
@@ -354,8 +380,9 @@ body {
     width: 100%;
   }
 }
+/* ===========================
+RECENT TRANSACTIONS
 
-/* RECENT TRANSACTIONS */
 
 .transaction-item {
   display: flex;
@@ -424,8 +451,9 @@ body {
 .transaction-right .expense {
   color: #dc2626;
 }
-
-/* MOBILE SIDEBAR */
+/* ===========================
+   MOBILE SIDEBAR
+=========================== */
 
 .sidebar-overlay {
   position: fixed;
@@ -454,3 +482,4 @@ body {
 
   visibility: visible;
 }
+

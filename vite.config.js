@@ -1,6 +1,8 @@
 import { defineConfig } from "vite";
-import { resolve } from "path";
-import { register } from "module";
+import { dirname, resolve } from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   build: {
