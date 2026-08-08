@@ -1,5 +1,47 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "framework": "vite"
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/login",
+      "destination": "/pages/login.html"
+    },
+    {
+      "source": "/signup",
+      "destination": "/pages/signup.html"
+    },
+    {
+      "source": "/dashboard",
+      "destination": "/pages/dashboard.html"
+    },
+    {
+      "source": "/income",
+      "destination": "/pages/income.html"
+    },
+    {
+      "source": "/expense",
+      "destination": "/pages/expense.html"
+    },
+    {
+      "source": "/budget",
+      "destination": "/pages/budget.html"
+    },
+    {
+      "source": "/report",
+      "destination": "/pages/report.html"
+    },
+    {
+      "source": "/settings",
+      "destination": "/pages/settings.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/pages/terms.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/pages/privacy.html"
+    }
+  ]
 }
