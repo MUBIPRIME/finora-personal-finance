@@ -8,8 +8,8 @@
       "destination": "/pages/login.html"
     },
     {
-      "source": "/signup",
-      "destination": "/pages/signup.html"
+      "source": "/register",
+      "destination": "/pages/register.html"
     },
     {
       "source": "/dashboard",
