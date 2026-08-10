@@ -17,6 +17,8 @@ href="../css/global.css">
 <link rel="stylesheet"
 href="../css/report.css">
 
+<link rel="stylesheet" href="../css/toast.css">
+
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -211,6 +213,20 @@ Loading transactions...
 
     </div>
 
+</div>
+
+<div id="toast" class="toast">
+    <div class="toast-icon">
+        <i id="toastIcon" class="fa-solid fa-circle-check"></i>
+    </div>
+    <div class="toast-content">
+        <h4 id="toastTitle">Success</h4>
+        <p id="toastMessage">Your action was completed successfully.</p>
+    </div>
+    <button id="toastClose" class="toast-close">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div id="toastProgress" class="toast-progress"></div>
 </div>
 
 <script
