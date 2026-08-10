@@ -56,29 +56,27 @@ function ensureToastStructure() {
 
 export function showToast(
 
-text,
-
-messageOrType,
+toastMessage,
 
 type="success"
 
 ){
 
-let titleText = text || "";
-let messageText = messageOrType || "";
-
 const toastTypes = ["success", "error", "warning", "info"];
 
-if (toastTypes.includes(messageOrType)) {
-    type = messageOrType;
-    messageText = titleText;
-    titleText = type === "error" ? "Error" : type === "warning" ? "Warning" : type === "info" ? "Info" : "Success";
-}
+type = toastTypes.includes(type) ? type : "success";
 
-if (!messageText) {
-    messageText = titleText;
-    titleText = type === "error" ? "Error" : type === "warning" ? "Warning" : type === "info" ? "Info" : "Success";
-}
+const titleText =
+    type === "error" ? "Error" :
+    type === "warning" ? "Warning" :
+    type === "info" ? "Info" :
+    "Success";
+
+const messageText = toastMessage ||
+    (type === "error" ? "An error occurred." :
+     type === "warning" ? "Warning message." :
+     type === "info" ? "Information." :
+     "Action completed successfully.");
 
 if(!ensureToastStructure()){
     window.alert(`${titleText}: ${messageText}`);

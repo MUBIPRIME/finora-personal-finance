@@ -266,6 +266,26 @@ textarea {
   color: #64748b;
 
   line-height: 1.5;
+
+  word-break: break-word;
+}
+
+@media (max-width: 500px) {
+  .toast {
+    top: 15px;
+    right: 10px;
+    left: 10px;
+    width: auto;
+    min-width: 0;
+  }
+
+  .toast-content h4 {
+    font-size: 15px;
+  }
+
+  .toast-content p {
+    font-size: 13px;
+  }
 }
 
 .toast-close {
@@ -349,6 +369,37 @@ textarea {
 .toast.info .toast-progress {
   background: #3b82f6;
 }
+
+html.dark .toast {
+  background: var(--card);
+  color: var(--text);
+}
+
+html.dark .toast-content h4 {
+  color: #f8fafc;
+}
+
+html.dark .toast-content p {
+  color: #cbd5e1;
+}
+
+html.dark .toast-close {
+  color: #cbd5e1;
+}
+
+html.dark .toast-close:hover {
+  color: #f8fafc;
+}
+
+@media (max-width: 600px) {
+  .toast {
+    width: calc(100% - 32px);
+    left: 16px;
+    right: 16px;
+    top: 16px;
+  }
+}
+
 html.dark {
   background: #0f172a;
 
