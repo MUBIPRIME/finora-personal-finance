@@ -38,6 +38,11 @@ body {
   margin: auto;
 
   background: var(--card);
+  /* Reduce calendar (date) input width on smaller screens */
+  #incomeForm input[type="date"] {
+    width: 60%;
+    max-width: 260px;
+  }
 
   padding: 40px;
 
@@ -190,6 +195,7 @@ body {
 
   .income-card {
     padding: 28px 20px;
+ 
 
     border-radius: 20px;
   }
